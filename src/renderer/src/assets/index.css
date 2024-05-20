@@ -9,10 +9,12 @@
 
   html,
   body {
-    @apply h-full
+    @apply h-full;
     @apply select-none;
     @apply bg-transparent;
-    @apply font-mono antialiased text-white;
+    @apply font-mono;
+    @apply antialiased;
+    @apply text-white;
     @apply overflow-hidden;
   }
 }
