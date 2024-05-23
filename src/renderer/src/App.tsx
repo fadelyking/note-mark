@@ -1,8 +1,12 @@
+import Sidebar from './components/Sidebar'
+import Content from './components/Content'
+import RootLayout from './components/RootLayout'
 function App() {
   return (
-    <div className="flex h-full items-center justify-center">
-      <span className=" text-4xl text-blue-500">Hello from electron</span>
-    </div>
+    <RootLayout>
+      <Sidebar></Sidebar>
+      <Content></Content>
+    </RootLayout>
   )
 }
 
