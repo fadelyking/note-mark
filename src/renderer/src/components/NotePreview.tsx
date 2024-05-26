@@ -16,8 +16,8 @@ export function NotePreview({
   return (
     <div
       className={cn('cursor-pointer px-2.5 py-3 rounded-md transition-colors duration-75', {
-        'bg-zinc-400/75': isActive,
-        'hover:bg-zinc-500/75': !isActive
+        'bg-slate-400/75': isActive,
+        'hover:bg-slate-300/75': !isActive
       })}
       {...props}
     >
