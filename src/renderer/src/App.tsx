@@ -3,7 +3,7 @@ import NotesPreviewList from './components/NotePreviewList'
 import Content from './components/Content'
 import RootLayout from './components/RootLayout'
 import ActionButtonRow from './components/ActionButtonRow'
-
+import MarkdownEditor from './components/MarkdownEditor'
 function App() {
   return (
     <RootLayout>
@@ -11,7 +11,9 @@ function App() {
         <ActionButtonRow />
         <NotesPreviewList />
       </Sidebar>
-      <Content>Content</Content>
+      <Content>
+        <MarkdownEditor />
+      </Content>
     </RootLayout>
   )
 }
