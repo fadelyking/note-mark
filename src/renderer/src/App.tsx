@@ -4,6 +4,7 @@ import Content from './components/Content'
 import RootLayout from './components/RootLayout'
 import ActionButtonRow from './components/ActionButtonRow'
 import MarkdownEditor from './components/MarkdownEditor'
+import FloatingNoteTitle from './components/FloatingNoteTitle'
 function App() {
   return (
     <RootLayout>
@@ -12,6 +13,7 @@ function App() {
         <NotesPreviewList />
       </Sidebar>
       <Content>
+        <FloatingNoteTitle />
         <MarkdownEditor />
       </Content>
     </RootLayout>
