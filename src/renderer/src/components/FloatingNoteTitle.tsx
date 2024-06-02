@@ -1,9 +1,13 @@
-export default function FloatingNoteTitle() {
-  const title = 'Note Title'
+import { selectedNoteAtom } from '@renderer/store'
+import { useAtomValue } from 'jotai'
 
+export default function FloatingNoteTitle() {
+  const selectedNote = useAtomValue(selectedNoteAtom)
+
+  if (!selectedNote) return null
   return (
     <div className="flex justify-center">
-      <span className="text-gray-400">{title}</span>
+      <span className="text-gray-400">{selectedNote.title}</span>
     </div>
   )
 }
