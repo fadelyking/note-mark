@@ -6,11 +6,17 @@ import {
   markdownShortcutPlugin,
   quotePlugin
 } from '@mdxeditor/editor'
+import { useMarkdownEditor } from '@renderer/hooks/useMarkdownEditor'
+import uuid4 from 'uuid4'
 
 export default function MarkdownEditor() {
+  const { selectedNote } = useMarkdownEditor()
+
+  if (!selectedNote) return null
   return (
     <MDXEditor
-      markdown={''}
+      markdown={selectedNote.content}
+      key={uuid4()}
       plugins={[
         headingsPlugin(),
         listsPlugin(),
